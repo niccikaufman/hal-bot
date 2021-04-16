@@ -31,8 +31,14 @@ _niccikaufman@gmail.com
 
 ## Test-Driven Development (TDD) Documentation
 
-Describe: password();
+Describe: passwordParser();
 
 Test: "It recognizes a single number and returns a certain phrase."
-Code: vowelCounter("1");
+Code: passwordParser("1");
 Expected Output: "beep"
+
+Code: passwordParser("2");
+Expected Output: "boop"
+
+Code: passwordParser("3");
+Expected Output: "I'm sorry, Dave. I'm afraid I can't do that."
