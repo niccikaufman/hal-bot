@@ -27,9 +27,13 @@ _[MIT](https://en.wikipedia.org/wiki/MIT_License)_
 
 ## Contact Information
 
-_niccikaufman@gmail.com
+_niccikaufman@gmail.com_
 
 ## Test-Driven Development (TDD) Documentation
+Describe: inputToArray();
+Test: "It returns an array listing all numbers ranging from 1 to the inputted number."
+Code: inputToArray("10")
+Expected Output: ["1", "2","3","4","5","6","7","8","9","10"]
 
 Describe: passwordParser();
 
@@ -41,4 +45,12 @@ Code: passwordParser("2");
 Expected Output: "boop"
 
 Code: passwordParser("3");
+Expected Output: "I'm sorry, Dave. I'm afraid I can't do that."
+
+Test: "It recognizes a number larger than or equal to 4 and returns that number."
+Code: passwordParser("4");
+Expected Output: "4"
+
+Test: "If a number includes more than one of the mutated numbers, it will return only the phrase of the larger number"
+Code: passwordParser("13");
 Expected Output: "I'm sorry, Dave. I'm afraid I can't do that."
