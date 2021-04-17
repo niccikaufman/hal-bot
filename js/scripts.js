@@ -31,12 +31,13 @@ function clearAll() {
 }
 
 //front end
-document.getElementById('landing-button').on('click', () => {
+$('#landing-button').on('click', function(event) {
+  event.preventDefault();
   $('#landing-page').toggle();
   $('#main-page').show();
   $('#hal-dialog-box').hide();
   $('#password').show();
-});
+})
 
 $('#password-submit').on('click', function(event) {
   event.preventDefault();
