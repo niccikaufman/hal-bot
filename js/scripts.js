@@ -1,14 +1,16 @@
+//back-end logic
 let responseArray = [];
 let callArray = [];
 let inputtedNumber;
 
 function inputToArray(inputtedNumber) {
-  parseInt(inputtedNumber);
+  inputtedNumber = document.getElementById('password-input');
+  console.log(inputtedNumber);
   for (let i = 1; i <= inputtedNumber; i++)
   callArray.push(i.toString());
   console.log(callArray);
 }
-function passwordParser() {
+function passwordParser(callArray) {
   callArray.forEach(function(element) {
     if (element.includes('3')) {
       responseArray.push("I'm sorry, Dave. I'm afraid I can't do that");
@@ -22,3 +24,16 @@ function passwordParser() {
   });
   console.log(responseArray.join(' '));
 }
+
+//front end
+document.getElementById('landing-button').addEventListener('click', () => {
+  $('#landing-page').toggle();
+  $('#main-page').show();
+});
+
+$('#password-submit').on('click', function(event) {
+  event.preventDefault();
+  inputToArray(inputtedNumber);
+  passwordParser(callArray);
+  $("#hal-dialog").text(responseArray.join(' '));
+})
