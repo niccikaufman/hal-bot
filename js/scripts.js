@@ -31,7 +31,7 @@ function clearAll() {
 }
 
 //front end
-document.getElementById('landing-button').addEventListener('click', () => {
+document.getElementById('landing-button').on('click', () => {
   $('#landing-page').toggle();
   $('#main-page').show();
   $('#hal-dialog-box').hide();
